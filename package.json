@@ -9,6 +9,9 @@
     "styles",
     "src"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@grapp/eslint-config": "^0.1.0",
     "@grapp/prettier-config": "^0.1.0",

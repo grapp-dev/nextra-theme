@@ -26,6 +26,8 @@ exports.withNextraOptions = {
       use: ['@svgr/webpack'],
     });
 
+    config.resolve.alias['react-native$'] = 'react-native-web';
+
     return config;
   },
   transpilePackages: ['@grapp/nextra-theme'],

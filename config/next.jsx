@@ -1,9 +1,11 @@
 import { useRouter } from 'next/router';
 
 export const getDefaultConfig = options => {
-  const { logo, footer, github, discord, title, description, docs } = options;
+  const { logo, footer, github, discord, title, description, docs, hue, saturation, ...rest } =
+    options;
 
-  return {
+  const config = {
+    ...rest,
     docsRepositoryBase: `${github}/blob/main/docs`,
     head: () => {
       return (
@@ -44,4 +46,14 @@ export const getDefaultConfig = options => {
       };
     },
   };
+
+  if (hue) {
+    config.primaryHue = hue;
+  }
+
+  if (saturation) {
+    config.primarySaturation = saturation;
+  }
+
+  return config;
 };

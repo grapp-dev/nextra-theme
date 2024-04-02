@@ -81,6 +81,10 @@ html {
   video {
     margin: 24px 0 16px;
   }
+
+  .nextra-toc li .nx-font-semibold {
+    font-weight: 400;
+  }
 }
 
 /* :root { */

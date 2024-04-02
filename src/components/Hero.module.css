@@ -29,7 +29,7 @@
   font-weight: 400;
 
   :global(.dark) & {
-    background-image: linear-gradient(146deg, #0089E6, #38ACFB);
+    background-image: linear-gradient(146deg, hsl(var(--nextra-primary-hue)var(--nextra-primary-saturation)40%/var(--tw-text-opacity)), hsl(var(--nextra-primary-hue)var(--nextra-primary-saturation)80%/var(--tw-text-opacity)));
   }
 }
 

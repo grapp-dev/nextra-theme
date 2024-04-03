@@ -14,7 +14,7 @@ exports.getNextraOptions = (config = {}) => {
   };
 };
 
-exports.getWithNextraOptions = config => {
+exports.getWithNextraOptions = (config = {}) => {
   const { images, transpilePackages = [], webpack, ...rest } = config;
 
   return {

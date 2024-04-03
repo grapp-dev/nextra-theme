@@ -15,7 +15,7 @@ exports.getNextraOptions = (config = {}) => {
 };
 
 exports.getWithNextraOptions = (config = {}) => {
-  const { images, webpack, ...rest } = config;
+  const { images, transpilePackages = [], webpack, ...rest } = config;
 
   return {
     output: 'export',
@@ -40,6 +40,7 @@ exports.getWithNextraOptions = (config = {}) => {
 
       return config;
     },
+    transpilePackages: ['@grapp/nextra-theme', ...transpilePackages],
     ...rest,
   };
 };

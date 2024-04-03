@@ -10,7 +10,9 @@
   padding-left: max(env(safe-area-inset-left), 1.5rem);
   padding-right: max(env(safe-area-inset-right), 1.5rem);
   max-width: 90rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline {
@@ -27,6 +29,8 @@
   letter-spacing: -0.5rem;
   font-family: 'Silkscreen', sans-serif;
   font-weight: 400;
+  max-width: 60rem;
+  text-align: center;
 
   :global(.dark) & {
     background-image: linear-gradient(146deg, hsl(var(--nextra-primary-hue)var(--nextra-primary-saturation)40%/var(--tw-text-opacity)), hsl(var(--nextra-primary-hue)var(--nextra-primary-saturation)80%/var(--tw-text-opacity)));
@@ -41,6 +45,8 @@
   font-weight: 400;
   line-height: 1.6;
   color: hsl(204 12% 45%);
+  max-width: 60rem;
+  text-align: center;
 
   br {
     display: none;

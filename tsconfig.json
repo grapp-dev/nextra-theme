@@ -12,6 +12,5 @@
     "resolveJsonModule": true,
     "jsx": "preserve",
     "noPropertyAccessFromIndexSignature": false
-  },
-  "include": ["./src/**/*", "./config/**/*"]
+  }
 }

@@ -1,34 +1,46 @@
-exports.nextraOptions = {
-  theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx',
-  defaultShowCopyCode: true,
-  staticImage: true,
-  flexsearch: {
-    codeblocks: false,
-  },
+exports.getNextraOptions = (config = {}) => {
+  const { flexsearch, ...rest } = config;
+
+  return {
+    theme: 'nextra-theme-docs',
+    themeConfig: './theme.config.jsx',
+    defaultShowCopyCode: true,
+    staticImage: true,
+    flexsearch: {
+      codeblocks: false,
+      ...flexsearch,
+    },
+    ...rest,
+  };
 };
 
-exports.withNextraOptions = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  webpack(config) {
-    const regex = /\/components\/svg\/.+\.svg$/;
-    const fileLoaderRule = config.module.rules.find(rule => {
-      return rule.test instanceof RegExp && rule.test.test('.svg');
-    });
+exports.getWithNextraOptions = config => {
+  const { images, transpilePackages = [], webpack, ...rest } = config;
 
-    fileLoaderRule.exclude = regex;
+  return {
+    output: 'export',
+    images: {
+      unoptimized: true,
+      ...images,
+    },
+    webpack(config) {
+      const regex = /\/components\/svg\/.+\.svg$/;
+      const fileLoaderRule = config.module.rules.find(rule => {
+        return rule.test instanceof RegExp && rule.test.test('.svg');
+      });
 
-    config.module.rules.push({
-      test: regex,
-      use: ['@svgr/webpack'],
-    });
+      fileLoaderRule.exclude = regex;
 
-    config.resolve.alias['react-native$'] = 'react-native-web';
+      config.module.rules.push({
+        test: regex,
+        use: ['@svgr/webpack'],
+      });
 
-    return config;
-  },
-  transpilePackages: ['@grapp/nextra-theme'],
+      webpack?.(config);
+
+      return config;
+    },
+    transpilePackages: ['@grapp/nextra-theme', ...transpilePackages],
+    ...rest,
+  };
 };

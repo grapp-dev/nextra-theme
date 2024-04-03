@@ -2,14 +2,21 @@
   "name": "@grapp/nextra-theme",
   "version": "0.2.4",
   "license": "MIT",
-  "module": "src/index.ts",
-  "types": "src/index.ts",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.mts",
   "files": [
     "package.json",
-    "config",
-    "styles",
-    "src"
+    "tsconfig.json",
+    "lib",
+    "config"
   ],
+  "scripts": {
+    "build": "bun run build:js && bun run build:css",
+    "build:js": "tsup",
+    "build:css": "postcss src/global.css -o lib/global.css",
+    "types": "tsup --dts-only",
+    "types:check": "tsc --noEmit"
+  },
   "publishConfig": {
     "access": "public"
   },
@@ -20,7 +27,9 @@
     "@types/react": "^18.2.65",
     "@types/react-dom": "^18.2.21",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "postcss-cli": "^11.0.0",
+    "prettier": "^3.2.5",
+    "tsup": "^8.0.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

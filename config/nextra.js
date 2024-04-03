@@ -15,7 +15,7 @@ exports.getNextraOptions = (config = {}) => {
 };
 
 exports.getWithNextraOptions = (config = {}) => {
-  const { images, transpilePackages = [], webpack, ...rest } = config;
+  const { images, webpack, ...rest } = config;
 
   return {
     output: 'export',
@@ -23,7 +23,7 @@ exports.getWithNextraOptions = (config = {}) => {
       unoptimized: true,
       ...images,
     },
-    webpack(config) {
+    webpack: config => {
       const regex = /\/components\/svg\/.+\.svg$/;
       const fileLoaderRule = config.module.rules.find(rule => {
         return rule.test instanceof RegExp && rule.test.test('.svg');
@@ -40,7 +40,6 @@ exports.getWithNextraOptions = (config = {}) => {
 
       return config;
     },
-    transpilePackages: ['@grapp/nextra-theme', ...transpilePackages],
     ...rest,
   };
 };

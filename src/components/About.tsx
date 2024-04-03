@@ -1,4 +1,4 @@
-import GrappLogo from './svg/grapp-logo.svg';
+import { GrappLogo } from './GrappLogo';
 
 export const About = () => {
   return (

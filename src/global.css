@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Silkscreen:wght@400;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html {
   h3 {
     font-size: 22px;

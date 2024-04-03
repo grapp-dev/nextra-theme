@@ -1,10 +1,25 @@
-import { useRouter } from 'next/router';
+import * as React from 'react';
 
-export const getDefaultConfig = options => {
+import { useRouter } from 'next/router';
+import { DocsThemeConfig } from 'nextra-theme-docs';
+
+type Options = DocsThemeConfig & {
+  readonly logo: JSX.Element;
+  readonly footer: JSX.Element;
+  readonly discord: string;
+  readonly title: string;
+  readonly description: string;
+  readonly github: string;
+  readonly docs: string;
+  readonly hue?: DocsThemeConfig['primaryHue'];
+  readonly saturation?: DocsThemeConfig['primarySaturation'];
+};
+
+export const getDefaultConfig = (options: Options) => {
   const { logo, footer, github, discord, title, description, docs, hue, saturation, ...rest } =
     options;
 
-  const config = {
+  const config: DocsThemeConfig = {
     ...rest,
     docsRepositoryBase: `${github}/blob/main/docs`,
     head: () => {

@@ -7,5 +7,4 @@ export * from './Homepage';
 export * from './Logo';
 export * from './Method';
 export * from './Property';
-
-export { default as GrappLogo } from './svg/grapp-logo.svg';
+export * from './GrappLogo';

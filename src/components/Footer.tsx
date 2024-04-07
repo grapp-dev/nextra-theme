@@ -2,6 +2,8 @@ import styles from './Footer.module.css';
 
 import * as React from 'react';
 
+import { useConfig } from 'nextra-theme-docs';
+
 type SectionLink = {
   readonly url: string;
   readonly title: string;
@@ -18,7 +20,9 @@ type Props = {
 };
 
 export const Footer = (props: Props) => {
-  const { sections, github } = props;
+  const { sections } = props;
+
+  const { project, chat } = useConfig();
 
   return (
     <div className={`${styles.root} lg:flex lg:flex-row-reverse`}>
@@ -50,7 +54,7 @@ export const Footer = (props: Props) => {
           <ul>
             <li>
               <a
-                href={github}
+                href={project.link}
                 className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]"
               >
                 GitHub ↗
@@ -58,7 +62,7 @@ export const Footer = (props: Props) => {
             </li>
             <li>
               <a
-                href="https://discord.gg/Rj2V3keVS4"
+                href={chat.link}
                 className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]"
               >
                 Discord ↗
@@ -66,7 +70,7 @@ export const Footer = (props: Props) => {
             </li>
             <li>
               <a
-                href={`${github}/discussions`}
+                href={`${project.link}/discussions`}
                 className="nx-text-primary-600 nx-underline nx-decoration-from-font [text-underline-position:from-font]"
               >
                 Discussions ↗

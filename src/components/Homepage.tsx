@@ -2,22 +2,23 @@ import styles from './Homepage.module.css';
 
 import * as React from 'react';
 
-type Props = {
+type Props = React.PropsWithChildren<{
   readonly hero: React.ReactNode;
-  readonly preview: string;
-  readonly features: React.ReactNode;
-};
+  readonly preview?: string;
+}>;
 
 export const Homepage = (props: Props) => {
-  const { hero, preview, features } = props;
+  const { hero, preview, children } = props;
   return (
     <>
       {hero}
-      <div className={styles.content}>
-        <div className={styles.preview}>
-          <img src={preview} />
-        </div>
-        {features}
+      <div className={styles.root}>
+        {preview ? (
+          <div className={styles.preview}>
+            <img src={preview} />
+          </div>
+        ) : null}
+        {children ? <div className={styles.content}>{children}</div> : null}
       </div>
     </>
   );

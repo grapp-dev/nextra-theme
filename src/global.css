@@ -42,8 +42,20 @@ html {
     background-color: #0c0f1a !important;
   }
 
+  :is(html[class~=dark] .dark\:nx-bg-neutral-800) {
+    background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 94% / .1) !important;
+  }
+
+  :is(html[class~=dark] .dark\:hover\:nx-bg-neutral-900:hover) {
+    background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation)94% / .05) !important;
+  }
+
   :is(html[class~=dark] .dark\:nx-text-neutral-400) {
     color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }
+
+  :is(html[class~=dark] .dark\:hover\:nx-border-neutral-700:hover) {
+    border-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 94% / .1);
   }
 
   &.dark {
@@ -58,6 +70,7 @@ html {
     --shiki-token-string-expression: #a8acc0;
     --shiki-token-punctuation: #878b9f;
     --shiki-token-link: #faf39c;
+    --grapp-hero-button-background-color: #161E35;
 
     .nextra-code-block pre {
       background-color: #0D111E;
@@ -83,6 +96,19 @@ html {
   .nextra-toc li .nx-font-semibold {
     font-weight: 400;
   }
+}
+
+:root {
+  --grapp-home-preview-max-width: 848px;
+  --grapp-home-preview-top-offset: -100px;
+  --grapp-home-content-max-width: 1208px;
+  --grapp-features-columns-number: 3;
+  --grapp-property-default-value-color: var(--shiki-token-constant);
+  --grapp-property-type-color: var(--shiki-token-link);
+  --grapp-method-argument-color: var(--shiki-token-parameter);
+  --grapp-method-return-value-color: var(--shiki-token-constant);
+  --grapp-method-type-color: var(--shiki-token-link);
+  --grapp-hero-button-background-color: #f3f4f6;
 }
 
 /* :root { */

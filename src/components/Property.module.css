@@ -1,9 +1,9 @@
 .default {
-  color: var(--shiki-token-constant);
+  color: var(--grapp-property-default-value-color);
 }
 
 .type {
-  color: var(--shiki-token-link);
+  color: var(--grapp-property-type-color);
 }
 
 .bg {

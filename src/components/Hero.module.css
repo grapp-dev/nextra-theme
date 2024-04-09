@@ -81,7 +81,7 @@
   font-size: 1.1rem;
   font-family: 'Silkscreen', sans-serif;
   border-radius: 4px;
-  background-color: #f3f4f6;
+  background-color: var(--grapp-hero-button-background-color);
 
   &:hover  {
     background-image: linear-gradient(146deg, #000, #444);
@@ -100,7 +100,7 @@
 
   :global(.dark) & {
     color: #fff;
-    background-color: #161E35;
+    background-color: var(--grapp-hero-button-background-color);
 
     &:hover {
       background-image: linear-gradient(80deg, #EE0979, #FF6A00);

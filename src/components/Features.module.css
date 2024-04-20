@@ -1,55 +1,6 @@
 .root {
+  padding-bottom: 60px;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
+  padding-right: max(env(safe-area-inset-right), 1.5rem);
 }
 
-.features {
-  padding: min(12vw, 2rem) 0;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: start center;
-  row-gap: 40px;
-
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (min-width: 960px) {
-    grid-template-columns: repeat(var(--grapp-features-columns-number), 1fr);
-  }
-
-  li {
-    max-width: 300px;
-    color: hsl(204 12% 45%);
-
-    :global(.dark) & {
-      color: hsl(204, 8%, 50%);
-    }
-
-    @media (min-width: 640px) {
-      max-width: 90%;
-    }
-
-    svg {
-      display: inline;
-      margin-right: 2px;
-      transform: translate(0, -1px);
-    }
-
-    strong {
-      display: block;
-      font-weight: 400;
-      color: hsl(204 12% 5%);
-
-      @media (min-width: 640px) {
-        display: inline;
-
-        &::after {
-          content: '.';
-        }
-      }
-
-      :global(.dark) & {
-        color: hsl(204, 8%, 90%);
-      }
-    }
-  }
-}

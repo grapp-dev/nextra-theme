@@ -1,36 +1,9 @@
 .root {
-  h3 {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: -0.06rem !important;
-    font-weight: 400;
-    white-space: nowrap;
-    text-align: center;
-    margin-bottom: 0;
+  background-repeat: repeat-x;
+  background-image: url('../images/hero-pattern.png');
+
+  :global(.dark) & {
+    background-image: url('../images/hero-pattern-dark.png');
   }
 }
 
-.preview {
-  margin: 0 auto;
-  margin-bottom: -100px;
-  display: block;
-  position: relative;
-  z-index: 2;
-  top: var(--grapp-home-preview-top-offset);
-  max-width: var(--grapp-home-preview-max-width);
-
-  img {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-}
-
-.content {
-  margin: 0 auto;
-  max-width: var(--grapp-home-content-max-width);
-  padding-left: max(env(safe-area-inset-left), 1.5rem);
-  padding-right: max(env(safe-area-inset-right), 1.5rem);
-  padding-bottom: 1.5rem;
-}

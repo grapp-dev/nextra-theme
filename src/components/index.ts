@@ -9,3 +9,6 @@ export * from './Method';
 export * from './Property';
 export * from './GrappLogo';
 export * from './NoSSR';
+export * from './Highlight';
+export * from './Chip';
+export * from './Blob';

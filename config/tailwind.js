@@ -3,7 +3,8 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx}',
     './theme.config.tsx',
-    './node_modules/@grapp/nextra-theme/src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@grapp/nextra-theme/src/**/*.{ts,tsx}',
+    './node_modules/@grapp/nextra-theme/lib/**/*.{js,jsx}',
   ],
   theme: {
     extend: {},

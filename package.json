@@ -1,6 +1,6 @@
 {
   "name": "@grapp/nextra-theme",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "license": "MIT",
   "module": "./lib/index.js",
   "types": "./lib/index.d.mts",

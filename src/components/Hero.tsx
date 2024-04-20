@@ -29,7 +29,7 @@ export const Hero = (props: Props) => {
     <div className="mx-auto max-w-[90rem] mb-10">
       <div
         className={clsx(
-          'grid lg:grid-cols-[var(--grapp-hero-grid-cols)] grid-cols-1 justify-between items-center gap-10 lg:pt-24 lg:pb-24 pt-8 pb-8',
+          'grid lg:grid-cols-[var(--grapp-hero-grid-cols)] grid-cols-1 justify-between items-center gap-10 lg:py-16 py-8',
           styles.content,
         )}
       >

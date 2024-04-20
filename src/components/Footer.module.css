@@ -1,11 +1,11 @@
 .root {
   flex: 1;
-  font-size: 0.9rem;
+  font-size: 0.935rem;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .columns {
@@ -17,6 +17,7 @@
   h4 {
     letter-spacing: -0.678px !important;
     font-family: 'Inter';
+    font-size: 1.1rem;
     font-weight: 600;
   }
 }

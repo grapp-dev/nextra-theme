@@ -41,7 +41,7 @@ export const Footer = (props: Props) => {
         {sections.map(section => {
           return (
             <section key={section.title}>
-              <h4 className="text-base mb-3 nx-font-semibold nx-text-gray-900 dark:nx-text-gray-100">
+              <h4 className="text-base mb-4 nx-font-semibold nx-text-gray-900 dark:nx-text-gray-100">
                 {section.title}
               </h4>
               <ul>
@@ -62,7 +62,7 @@ export const Footer = (props: Props) => {
           );
         })}
         <section>
-          <h4 className="text-base mb-3 nx-font-semibold nx-text-gray-900 dark:nx-text-gray-100">
+          <h4 className="text-base mb-4 nx-font-semibold nx-text-gray-900 dark:nx-text-gray-100">
             Community
           </h4>
           <ul>
@@ -112,9 +112,12 @@ export const Footer = (props: Props) => {
       <div className="lg:w-1/3 lg:pr-24">
         <Logo className={clsx('mb-6', styles.logo)} />
         <span className="block mb-6 nx-text-gray-600 dark:nx-text-gray-400">{description}</span>
-        <span>
+        <span className="text-sm">
           © {new Date().getFullYear()}{' '}
-          <a href="/" className="nx-text-primary-600 dark:nx-text-gray-100">
+          <a
+            href="https://github.com/grapp-dev"
+            className="nx-text-primary-600 dark:nx-text-gray-100"
+          >
             Grapp.Dev
           </a>
         </span>

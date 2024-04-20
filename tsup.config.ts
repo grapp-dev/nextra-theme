@@ -16,5 +16,6 @@ export default defineConfig({
   },
   loader: {
     '.css': 'local-css',
+    '.png': 'base64',
   },
 });

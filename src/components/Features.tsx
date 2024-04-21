@@ -4,25 +4,18 @@ import * as React from 'react';
 
 import clsx from 'clsx';
 
-import { Chip } from './Chip';
-
 type Props = React.PropsWithChildren<{
-  readonly title?: string;
-  readonly previewTitle?: string;
-  readonly listTitle?: string;
+  readonly header?: React.ReactNode;
   readonly preview?: React.ReactNode;
+  readonly headerPosition?: 'main' | 'list' | 'preview';
 }>;
 
 export const Features = (props: Props) => {
-  const { children, title, previewTitle, listTitle, preview } = props;
+  const { children, header, headerPosition = 'main', preview } = props;
 
   return (
     <div className={clsx('mx-auto max-w-[90rem]', styles.root)}>
-      {title && (
-        <div className="text-center lg:mb-12 mb-4">
-          <Chip label={title} />
-        </div>
-      )}
+      {headerPosition === 'main' && header}
       <div
         className={clsx(
           styles.container,
@@ -36,20 +29,12 @@ export const Features = (props: Props) => {
               'relative lg:col-[var(--grapp-features-preview-column-span)]',
             )}
           >
-            {previewTitle && (
-              <div className="text-center lg:mb-10 mb-4">
-                <Chip label={previewTitle} />
-              </div>
-            )}
+            {headerPosition === 'preview' && header}
             {preview}
           </div>
         )}
         <div className="lg:col-[var(--grapp-features-list-column-span)]">
-          {listTitle && (
-            <div className="text-center lg:mb-10 mb-4">
-              <Chip label={listTitle} />
-            </div>
-          )}
+          {headerPosition === 'list' && header}
           <div className="grid sm:grid-cols-[var(--grapp-features-grid-cols)] grid-cols-1 gap-7">
             {children}
           </div>

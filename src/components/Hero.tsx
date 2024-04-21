@@ -36,7 +36,9 @@ export const Hero = (props: Props) => {
         <div className="lg:col-[var(--grapp-hero-text-column-span)] z-10">
           {Logo && <Logo className={clsx('mb-6', styles.logo)} />}
           <h1 className={clsx('mb-6', styles.title)}>{title}</h1>
-          <p className={clsx('mb-6', styles.description)}>{description}</p>
+          <p className={clsx('mb-6 nx-text-gray-500 dark:nx-text-gray-400', styles.description)}>
+            {description}
+          </p>
           <Link className={`${styles.button} ${styles.buttonFull}`} href={getStartedUrl}>
             {getStartedTitle} <span>→</span>
           </Link>

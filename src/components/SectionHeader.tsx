@@ -24,7 +24,7 @@ export const SectionHeader = (props: Props) => {
       )}
       {title && <h2 className={clsx(styles.title, description && 'mb-4')}>{title}</h2>}
       {description && (
-        <div className={clsx(styles.description, 'px-20 nx-text-gray-500 dark:nx-text-gray-400')}>
+        <div className={clsx(styles.description, 'lg:px-20 px-6 nx-text-gray-500')}>
           {description}
         </div>
       )}

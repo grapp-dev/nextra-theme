@@ -4,3 +4,12 @@
   padding-right: max(env(safe-area-inset-right), 1.5rem);
 }
 
+.preview {
+  img, video {
+    margin: 0;
+  }
+}
+
+.container { 
+  align-items: var(--grapp-features-container-align-items);
+}

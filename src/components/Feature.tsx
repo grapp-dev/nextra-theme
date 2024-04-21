@@ -1,4 +1,8 @@
+import styles from './Feature.module.css';
+
 import * as React from 'react';
+
+import clsx from 'clsx';
 
 type Props = {
   readonly title: string;
@@ -20,7 +24,7 @@ export const Feature = (props: Props) => {
           <Icon fill={color} />
         </div>
       )}
-      <h4 className="text-base mt-6 mb-3 nx-font-semibold nx-text-gray-900 dark:nx-text-gray-100">
+      <h4 className={clsx(styles.title, 'mt-6 mb-3 nx-text-gray-900 dark:nx-text-gray-100')}>
         {title}
       </h4>
       <span className="nx-text-gray-500">{description}</span>

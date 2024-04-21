@@ -69,6 +69,8 @@ export const Footer = (props: Props) => {
             <li className="mb-2">
               <a
                 href={project?.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nx-text-gray-500 hover:nx-text-gray-900  dark:hover:nx-text-gray-300"
               >
                 GitHub ↗
@@ -77,6 +79,8 @@ export const Footer = (props: Props) => {
             <li className="mb-2">
               <a
                 href={chat?.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nx-text-gray-500 hover:nx-text-gray-900  dark:hover:nx-text-gray-300"
               >
                 Discord ↗
@@ -85,6 +89,8 @@ export const Footer = (props: Props) => {
             <li className="mb-2">
               <a
                 href="https://x.com/__marcin_"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nx-text-gray-500 hover:nx-text-gray-900  dark:hover:nx-text-gray-300"
               >
                 Twitter ↗
@@ -93,6 +99,8 @@ export const Footer = (props: Props) => {
             <li className="mb-2">
               <a
                 href={`${project?.link}/discussions`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nx-text-gray-500 hover:nx-text-gray-900  dark:hover:nx-text-gray-300"
               >
                 Discussions ↗
@@ -101,6 +109,8 @@ export const Footer = (props: Props) => {
             <li className="mb-2">
               <a
                 href="https://github.com/sponsors/mobily"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="nx-text-gray-500 hover:nx-text-gray-900  dark:hover:nx-text-gray-300"
               >
                 Sponsor ↗
@@ -116,6 +126,8 @@ export const Footer = (props: Props) => {
           © {new Date().getFullYear()}{' '}
           <a
             href="https://github.com/grapp-dev"
+            target="_blank"
+            rel="noopener noreferrer"
             className="nx-text-primary-600 dark:nx-text-gray-100"
           >
             Grapp.Dev

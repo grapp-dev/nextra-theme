@@ -107,6 +107,7 @@ html {
   --grapp-hero-preview-column-span: span 3 / span 3;
   --grapp-hero-preview-column-start: 4;
   --grapp-features-container-grid-cols: repeat(3, minmax(0, 1fr));
+  --grapp-features-container-align-items: flex-start;
   --grapp-features-grid-cols: repeat(3, minmax(0, 1fr));
   --grapp-features-list-column-span: span 3 / span 3;
   --grapp-features-preview-column-span: span 1 / span 1;

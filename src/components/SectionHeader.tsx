@@ -22,11 +22,9 @@ export const SectionHeader = (props: Props) => {
           <Chip label={badge} />
         </div>
       )}
-      {title && <h2 className={clsx(styles.title, description && 'mb-4')}>{title}</h2>}
+      {title && <h2 className={clsx(styles.title, description && 'mb-3')}>{title}</h2>}
       {description && (
-        <div className={clsx(styles.description, 'lg:px-20 px-6 nx-text-gray-500')}>
-          {description}
-        </div>
+        <div className={clsx(styles.description, 'lg:px-20 nx-text-gray-500')}>{description}</div>
       )}
     </div>
   );

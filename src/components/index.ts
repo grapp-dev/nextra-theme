@@ -12,4 +12,5 @@ export * from './NoSSR';
 export * from './Highlight';
 export * from './Chip';
 export * from './Blob';
+export * from './Section';
 export * from './SectionHeader';

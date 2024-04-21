@@ -4,17 +4,20 @@ import * as React from 'react';
 
 import clsx from 'clsx';
 
+import { Section } from './Section';
+
 type Props = React.PropsWithChildren<{
   readonly header?: React.ReactNode;
   readonly preview?: React.ReactNode;
   readonly headerPosition?: 'main' | 'list' | 'preview';
+  readonly className?: string;
 }>;
 
 export const Features = (props: Props) => {
-  const { children, header, headerPosition = 'main', preview } = props;
+  const { children, header, headerPosition = 'main', preview, className } = props;
 
   return (
-    <div className={clsx('mx-auto max-w-[90rem]', styles.root)}>
+    <Section className={className}>
       {headerPosition === 'main' && header}
       <div
         className={clsx(
@@ -40,6 +43,6 @@ export const Features = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };

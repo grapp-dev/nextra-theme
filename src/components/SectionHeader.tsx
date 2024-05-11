@@ -18,13 +18,17 @@ export const SectionHeader = (props: Props) => {
   return (
     <div className={clsx('text-center mb-12', styles.root)}>
       {badge && (
-        <div className={clsx(title && 'mb-6', 'text-center')}>
+        <div className={clsx(title && 'mb-8', 'text-center')}>
           <Chip label={badge} />
         </div>
       )}
-      {title && <h2 className={clsx(styles.title, description && 'mb-3')}>{title}</h2>}
+      {title && <h2 className={clsx(styles.title, description && 'mb-4')}>{title}</h2>}
       {description && (
-        <div className={clsx(styles.description, 'lg:px-20 nx-text-gray-500')}>{description}</div>
+        <div
+          className={clsx(styles.description, 'lg:px-20 nx-text-gray-500 dark:nx-text-gray-400')}
+        >
+          {description}
+        </div>
       )}
     </div>
   );

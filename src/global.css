@@ -11,24 +11,20 @@ html {
 
   .nextra-code-block pre {
     font-size: 16px;
-    --tw-bg-opacity: 0.03;
-    background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-  }
-
-  :is(html[class~=dark] body) {
-    background-color: #0c0f1a;
+    background-color: var(--grapp-code-block-background-color) !important;
   }
 
   :is(html[class~=dark] .nextra-sidebar-container),
   :is(html[class~=dark] .nextra-nav-container-blur),
   :is(html[class~=dark] .dark\:nx-bg-dark),
-  :is(html[class~=dark] footer) {
+  :is(html[class~=dark] footer),
+  :is(html[class~=dark] body) {
     --tw-shadow: none;
-    background-color: #0c0f1a !important;
+    background-color: var(--grapp-background-color) !important;
   }
 
   :is(html[class~=dark] .dark\:nx-bg-neutral-800) {
-    background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 94% / .1) !important;
+    background-color: hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 10% / 1) !important;
   }
 
   :is(html[class~=dark] .dark\:hover\:nx-bg-neutral-900:hover) {
@@ -55,11 +51,10 @@ html {
     --shiki-token-string-expression: #a8acc0;
     --shiki-token-punctuation: #878b9f;
     --shiki-token-link: #faf39c;
-    --grapp-hero-button-background-color: #161E35;
 
-    .nextra-code-block pre {
-      background-color: #0D111E;
-    }
+    --grapp-hero-button-background-color: #161E35;
+    --grapp-background-color: #0c0f1a;
+    --grapp-code-block-background-color: #0D111E;
   }
 
   .grapp {
@@ -97,6 +92,8 @@ html {
 }
 
 :root {
+  --grapp-background-color: #FFF;
+  --grapp-code-block-background-color: rgba(0, 0, 0, 0.03);
   --grapp-hero-grid-cols: repeat(6, minmax(0, 1fr));
   --grapp-hero-text-column-span: span 3 / span 3;
   --grapp-hero-preview-column-span: span 3 / span 3;

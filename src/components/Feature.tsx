@@ -36,7 +36,9 @@ export const Feature = (props: Props) => {
       >
         {title}
       </h4>
-      <span className={clsx(isCenter && 'text-center', 'nx-text-gray-500')}>{description}</span>
+      <span className={clsx(isCenter && 'text-center', 'nx-text-gray-500 dark:nx-text-gray-400')}>
+        {description}
+      </span>
     </div>
   );
 };
